@@ -1,0 +1,92 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Oct  8 17:01:58 2024
+# Process ID: 15284
+# Current directory: C:/Verilog_lab/my_cnt3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10884 C:\Verilog_lab\my_cnt3\my_cnt3.xpr
+# Log file: C:/Verilog_lab/my_cnt3/vivado.log
+# Journal file: C:/Verilog_lab/my_cnt3\vivado.jou
+# Running On: COMSYS01, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 34020 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Verilog_lab/my_cnt3/my_cnt3.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project C:/Verilog_lab/my_adder/my_adder.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project C:/Verilog_lab/my_cnt3/my_cnt3.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {q[3]}]]
+save_constraints
+reset_run impl_1
+place_ports {q[3]} T10
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Verilog_lab/my_cnt3/my_cnt3.runs/impl_1/my_cnt3.bit} [get_hw_devices xc7z007s_1]
+current_hw_device [get_hw_devices xc7z007s_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z007s_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {C:/Verilog_lab/my_cnt3/my_cnt3.runs/impl_1/my_cnt3.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+close_design
+close_hw_manager
+close_project
+open_project C:/Verilog_lab/my_cnt3/my_cnt3.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+open_run synth_1 -name synth_1
+reset_run impl_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+close_design
+open_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Verilog_lab/my_cnt3/my_cnt3.runs/impl_1/my_cnt3.bit} [get_hw_devices xc7z007s_1]
+current_hw_device [get_hw_devices xc7z007s_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z007s_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {C:/Verilog_lab/my_cnt3/my_cnt3.runs/impl_1/my_cnt3.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+close_hw_manager
